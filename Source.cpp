@@ -394,13 +394,7 @@ vector<string> Filter(string in) {
 }
 
 
-vector<keyblock> AVLtree::searchPriceAndHash(string key) {
-	vector<keyblock> out;
+node * AVLtree::searchPriceAndHash(string key) {
 	node* tmp = search(root, key);
-	for (int i = 0; i < tmp->data.size(); i++) {
-		if (i == 5)
-			break;
-		out.push_back(tmp->data[i]);
-	}
 	return out;
 }
