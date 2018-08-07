@@ -56,7 +56,7 @@ public:
 	void printInorder();
 	bool search(string x);
 	void LoadStopWord();
-	vector<keyblock>searchPriceAndHash(string key);
+	node * searchPriceAndHash(string key);
 };
 //some plugin function =))
 int Max(int a, int b);
