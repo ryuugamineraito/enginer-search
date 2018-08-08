@@ -398,3 +398,46 @@ node * AVLtree::searchPriceAndHash(string key) {
 	node* tmp = search(root, key);
 	return out;
 }
+
+
+void ReLoadFile(string path, AVLtree&a) {
+	ifstream fin, fin_file;
+	string tmp = path;
+	path += "summary.txt";
+	fin.open(path);
+
+	if (fin.is_open()) {
+		while (!fin.eof()) {
+			string filename;
+			getline(fin,filename, '\n');
+			string fullpath = tmp + filename + ".txt";
+			fin_file.open(fullpath);
+			if (fin_file.is_open())
+				fileprocess(fin_file, a, filename);
+		}
+		fin.close();
+	}
+	a.Sort();
+}
+
+void CreateFile_Summary(string path, string a) {
+	ofstream fout;
+	path += "summary.txt";
+	fout.open(path, ios::app);
+	if (fout.is_open())
+	{
+		fout << a << endl;
+		fout.close();
+	}
+}
+
+//save the history search
+void CreateFileHistory(string path,string query) {
+	ofstream fout;
+	fout.open(path, ios::app);
+	if (fout.is_open()) {
+		fout << query << endl;
+		fout.close();
+	}
+}
+
