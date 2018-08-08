@@ -67,5 +67,8 @@ void lowercase(string &classname);
 bool strcmpi(string source, string des);
 void keyblockSort(vector<keyblock> &a);
 vector<string> Filter(string in);
+void CreateFile_Path(string path, string a);
+void ReLoadFile(string path, AVLtree&a);
+void CreateFileHistory(string path, string query)
 
 #endif
