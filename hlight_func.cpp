@@ -1,3 +1,4 @@
+#ibclude"Header.h"
 #include "Highlight.h"
 int Nword(string text) {
 	int n = 0; int l = text.length();
