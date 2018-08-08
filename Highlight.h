@@ -1,14 +1,10 @@
-#ifndef HIGHLIGHT
-#define HIGHLIGHT
+#ifndef HIGHLIGHT_H_
+#define HIGHLIGHT_H_
 
 //just use hightlight_para (string name_of_the_file.txt, int position_of_the_paragraph, string input_query)
 
-#include <iostream>
-using namespace std;
-#include <fstream>
-#include <string>
+#include"Header.h"
 #include <Windows.h>
-#include <cstring>
 
 int Nword(string text);						//return the number of individual word inside text
 string* query_arr(string text);				//make an array out of individual word from text
